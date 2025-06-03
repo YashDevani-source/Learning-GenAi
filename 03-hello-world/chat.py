@@ -23,13 +23,15 @@ try:
         response = client.models.generate_content(
         model="gemini-2.0-flash",
         contents=[
-                {"role": "system", "parts": [{"text": SYSTEM_PROMPT}]},
-                {"role": "user", "parts": [{"text": "Hey my name is Yash."}]},
+                {"role": "user", "parts": [{"text": SYSTEM_PROMPT}]},
+                {"role": "user", "parts": [{"text": "Hey my name is Yash Devani."}]},
         ], 
         )
 
         print("Response:")
         print(response)
+        print("Response text:") 
+        print(response.text)
 except Exception as e:
         print("Error:")
         print(e)
